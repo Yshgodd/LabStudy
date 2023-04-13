@@ -102,19 +102,20 @@ body > .info {
     margin-right: var(--padding);
 }
 
-.info .metadata .titleAndButton .title .clamp {
+.info .metadata .titleAndButton .title.clamp {
     display: -webkit-box;
     -webkit-box-orient: vertical;
-    -webkit-line-clamp: 2;
+    -webkit-line-clamp: 3;
     overflow: hidden;
 }
 
 .info .metadata .titleAndButton .moreBtn{
     height: 100%;
+    rotate: 180deg;
     transition: transform 300ms ease-in-out;
 }
 
-.info .metadata .titleAndButton .moreBtn .clicked{
+.info .metadata .titleAndButton .moreBtn.clicked{
     transform: rotate(180deg);
     
 }
@@ -223,6 +224,7 @@ body > .info {
 }
 .upNext .item .moreBtn {
     flex: 1 1 5%;
+    background-color: white;
 }
 
 .upNext .item .info {
@@ -249,6 +251,9 @@ body > .info {
     .infoAndUpNext {
         flex-direction: row;
         margin: var(--padding)
+    }
+    .upNext {
+        flex: 100%;
     }
 }
 
