@@ -112,6 +112,7 @@ body > .info {
 .info .metadata .titleAndButton .moreBtn{
     height: 100%;
     rotate: 180deg;
+    background-color: var(--white-color);
     transition: transform 300ms ease-in-out;
 }
 
