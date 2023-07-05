@@ -1,4 +1,4 @@
-//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
+
 import express from 'express';
 import bodyParser from 'body-parser';
 import cors from 'cors';
@@ -7,8 +7,8 @@ import OpenAI from 'openai';
 const { Configuration, OpenAIApi } = OpenAI;
 
 const configuration = new Configuration({
-    organization: "org-pE5yaM5sAS7aNTOQTSR8xDrw",
-    apiKey: "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",
+    organization: "org-pE5yaM5sAS7aNTOQTSR8xDrw",// pls check your organization and put in here
+    apiKey: "YOUR_API_KEY_HERE",
 });
 const openai = new OpenAIApi(configuration);
 
