@@ -3,7 +3,7 @@ import { faker } from "@faker-js/faker";
 import { Box, Stack } from "@mui/material";
 
 import Header from "./Header";
-import Footer from "./../Chat/Footer";
+import Footer from "./Footer";
 import Message from './Message';
 
 const Conversation = () => {
