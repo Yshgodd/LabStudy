@@ -14,7 +14,7 @@ export const defaultSettings = {
 };
 
 export const NAVBAR = {
-  BASE_WIDTH: 260,
+  BASE_WIDTH: 500,
   DASHBOARD_WIDTH: 280,
   DASHBOARD_COLLAPSE_WIDTH: 88,
   //

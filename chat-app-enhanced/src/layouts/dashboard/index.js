@@ -11,7 +11,7 @@ import SideBar from './SideBar';
 
 const DashboardLayout = () => {
   return (
-    <Stack direction = "row">
+    <Stack direction = "row" >
       {/* side bar */}
       <SideBar/>
       <Outlet />

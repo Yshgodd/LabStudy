@@ -1,9 +1,16 @@
 import React from "react";
 import { Box, Stack } from "@mui/material";
 import { Chat_History } from "../../data"; // distructuring
-import { Timeline, TextMsg, MediaMsg, ReplyMsg, LinkMsg,DocMsg } from "./MsgTypes";
+import {
+  Timeline,
+  TextMsg,
+  MediaMsg,
+  ReplyMsg,
+  LinkMsg,
+  DocMsg,
+} from "./MsgTypes";
 
-const Message = () => {
+const Message = ({ menu }) => {
   return (
     <Box p={3}>
       <Stack spacing={3}>
@@ -17,21 +24,21 @@ const Message = () => {
               switch (el.subtype) {
                 case "img":
                   //img msg
-                  return <MediaMsg el={el} />;
+                  return <MediaMsg el={el} menu={menu} />;
 
                 case "doc":
                   //doc msg
-                  return <DocMsg el={el}/>
+                  return <DocMsg el={el} menu={menu} />;
                 case "link":
                   //link msg
-                  return <LinkMsg el={el} />
+                  return <LinkMsg el={el} menu={menu} />;
                 case "reply":
                   //reply msg
 
-                  return <ReplyMsg el={el} />;
+                  return <ReplyMsg el={el} menu={menu} />;
                 default:
                   //text msg
-                  return <TextMsg el={el} />;
+                  return <TextMsg el={el} menu={menu} />;
               }
               break;
 

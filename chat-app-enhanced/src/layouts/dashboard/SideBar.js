@@ -43,6 +43,7 @@ const SideBar = () => {
         boxShadow: "0px 0px 2px rgba(0,0,0,0.25)",
         height: "100vh",
         width: 100,
+        overflowY: "scroll",
       }}
     >
       <Stack
@@ -69,8 +70,8 @@ const SideBar = () => {
             alignItems="center"
             spacing={3}
           >
-            {Nav_Buttons.map((el) =>
-              el.index === selected ? (
+            {Nav_Buttons.map((el) => {
+             return el.index === selected ? (
                 <Box
                   p={1}
                   sx={{
@@ -102,8 +103,8 @@ const SideBar = () => {
                   {el.icon}
                 </IconButton>
               )
-            )}
-            <Divider sx={{ width: "48px" }} />
+                })}
+            <Divider sx={{ width: 48 }} />
             {selected === 3 ? (
               <Box
                 p={1}
@@ -142,7 +143,7 @@ const SideBar = () => {
             defaultChecked
           />
           <Avatar
-            sx={{ cursor: 'pointer' }}
+            sx={{ cursor: "pointer" }}
             id="basic-button"
             aria-controls={open ? "basic-menu" : undefined}
             aria-haspopup="true"
@@ -159,12 +160,12 @@ const SideBar = () => {
               "aria-labelledby": "basic-button",
             }}
             anchorOrigin={{
-              vertical:"bottom",
-              horizontal:"right",
+              vertical: "bottom",
+              horizontal: "right",
             }}
             transformOrigin={{
-              vertical:"bottom",
-              horizontal:"left",
+              vertical: "bottom",
+              horizontal: "left",
             }}
           >
             <Stack spacing={1} px={1}>
