@@ -9,6 +9,10 @@ import {
   Users,
 } from "phosphor-react";
 
+import Logo from "../assets/Images/su.ico"
+import SyuImg from "../assets/Images/syu.jpg"
+
+
 const Profile_Menu = [
   {
     title: "Profile",
@@ -19,7 +23,7 @@ const Profile_Menu = [
     icon: <Gear />,
   },
   {
-    title: "Profile",
+    title: "Logout",
     icon: <SignOut />,
   },
 ];
@@ -46,12 +50,89 @@ const Nav_Setting = [
   },
 ];
 
+const MembersList=[
+  {
+    id:0,
+    img: faker.image.avatar(),
+    name: faker.name.firstName(),
+    online:true,
+  },
+  {
+    id:1,
+    img: faker.image.avatar(),
+    name: faker.name.firstName(),
+    online:false,
+  },
+  {
+    id:2,
+    img: faker.image.avatar(),
+    name: faker.name.firstName(),
+    online:true,
+  },
+  {
+    id:3,
+    img: faker.image.avatar(),
+    name: faker.name.firstName(),
+    online:true,
+  },
+  {
+    id:4,
+    img: faker.image.avatar(),
+    name: faker.name.firstName(),
+    online:false,
+  },
+] 
+
+
+const CallLogs = [
+  {
+    id:0,
+    img: faker.image.avatar(),
+    name: faker.name.firstName(),
+    missed:false,
+    incoming:true,
+ 
+  },
+  {
+    id:1,
+    img: faker.image.avatar(),
+    name: faker.name.firstName(),
+    missed:true,
+    incoming:true,
+   
+  },
+  {
+    id:2,
+    img: faker.image.avatar(),
+    name: faker.name.firstName(),
+    missed:true,
+    incoming:false,
+   
+  },
+  {
+    id:3,
+    img: faker.image.avatar(),
+    name: faker.name.firstName(),
+    missed:false,
+    incoming:false,
+ 
+  },
+  {
+    id:4,
+    img: faker.image.avatar(),
+    name: faker.name.firstName(),
+    missed:true,
+    incoming:true,
+   
+  },
+];
+
 const ChatList = [
   {
     id: 0,
-    img: faker.image.avatar(),
-    name: faker.name.firstName(),
-    msg: faker.music.songName(),
+    img: "" ,
+    name: "수호",
+    msg: "이거봐 ㅋㅋ 진짜 재밌지",
     time: "9:36",
     unread: 0,
     pinned: true,
@@ -60,8 +141,8 @@ const ChatList = [
   {
     id: 1,
     img: faker.image.avatar(),
-    name: faker.name.firstName(),
-    msg: faker.music.songName(),
+    name: "윤성훈",
+    msg: "내일 오후 5시",
     time: "12:02",
     unread: 2,
     pinned: true,
@@ -70,8 +151,8 @@ const ChatList = [
   {
     id: 2,
     img: faker.image.avatar(),
-    name: faker.name.firstName(),
-    msg: faker.music.songName(),
+    name: "물리치료 조교실",
+    msg: "언제 완성 됩니까? ",
     time: "10:35",
     unread: 3,
     pinned: false,
@@ -80,8 +161,8 @@ const ChatList = [
   {
     id: 3,
     img: faker.image.avatar(),
-    name: faker.name.firstName(),
-    msg: faker.music.songName(),
+    name: "또치",
+    msg: "테스트 입니다.",
     time: "04:00",
     unread: 0,
     pinned: false,
@@ -90,8 +171,8 @@ const ChatList = [
   {
     id: 4,
     img: faker.image.avatar(),
-    name: faker.name.firstName(),
-    msg: faker.music.songName(),
+    name: "나르샤",
+    msg: "나르샤 나르샤",
     time: "08:42",
     unread: 0,
     pinned: false,
@@ -100,8 +181,8 @@ const ChatList = [
   {
     id: 5,
     img: faker.image.avatar(),
-    name: faker.name.firstName(),
-    msg: faker.music.songName(),
+    name: "이상민",
+    msg: "밥 뭐먹지",
     time: "08:42",
     unread: 0,
     pinned: false,
@@ -110,8 +191,8 @@ const ChatList = [
   {
     id: 6,
     img: faker.image.avatar(),
-    name: faker.name.firstName(),
-    msg: faker.music.songName(),
+    name: "오왕택",
+    msg: "테스트 테스트 테스트 테스트",
     time: "08:42",
     unread: 0,
     pinned: false,
@@ -120,8 +201,8 @@ const ChatList = [
   {
     id: 7,
     img: faker.image.avatar(),
-    name: faker.name.firstName(),
-    msg: faker.music.songName(),
+    name: "김영일",
+    msg: "테스스스트 테스트트트 테스트",
     time: "08:42",
     unread: 0,
     pinned: false,
@@ -132,7 +213,7 @@ const ChatList = [
 const Chat_History = [
   {
     type: "msg",
-    message: "Hi 👋🏻, How are ya ?",
+    message: "안녕 수야~ ?",
     incoming: true,
     outgoing: false,
   },
@@ -142,19 +223,19 @@ const Chat_History = [
   },
   {
     type: "msg",
-    message: "Hi 👋 Panda, not bad, u ?",
+    message: "안녕 수호야 무슨일이야~",
     incoming: false,
     outgoing: true,
   },
   {
     type: "msg",
-    message: "Can you send me an abstarct image?",
+    message: "백주년 기념관 사진 보내 줄 수 있니?",
     incoming: false,
     outgoing: true,
   },
   {
     type: "msg",
-    message: "Ya sure, sending you a pic",
+    message: "당연하지 기다려봐",
     incoming: true,
     outgoing: false,
   },
@@ -162,14 +243,14 @@ const Chat_History = [
   {
     type: "msg",
     subtype: "img",
-    message: "Here You Go",
-    img: faker.image.abstract(),
+    message: "보냈어",
+    img: SyuImg,
     incoming: true,
     outgoing: false,
   },
   {
     type: "msg",
-    message: "Can you please send this in file format?",
+    message: "이거 파일로좀 보내줄 수 있어?",
     incoming: false,
     outgoing: true,
   },
@@ -177,7 +258,7 @@ const Chat_History = [
   {
     type: "msg",
     subtype: "doc",
-    message: "Yes sure, here you go.",
+    message: "알겠어 보낼게~~.",
     incoming: true,
     outgoing: false,
   },
@@ -185,15 +266,15 @@ const Chat_History = [
     type: "msg",
     subtype: "link",
     preview: faker.image.cats(),
-    message: "Yep, I can also do that",
+    message: "이거봐 ㅋㅋ 진짜 재밌지",
     incoming: true,
     outgoing: false,
   },
   {
     type: "msg",
     subtype: "reply",
-    reply: "This is a reply",
-    message: "Yep, I can also do that",
+    reply: "답장입니다.",
+    message: "이거봐 ㅋㅋ 진짜 재밌지",
     incoming: false,
     outgoing: true,
   },
@@ -296,4 +377,6 @@ export {
   Message_options,
   SHARED_DOCS,
   SHARED_LINKS,
+  CallLogs,
+  MembersList,
 };

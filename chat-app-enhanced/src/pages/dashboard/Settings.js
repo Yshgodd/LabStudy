@@ -146,8 +146,8 @@ const Settings = () => {
           </Stack>
         </Box>
         {/* right pannel */}
-        <Stack p={60} justifyContent={"center"} >
-          <Typography variant="h1">Setting page...</Typography>
+        <Stack  justifyContent={"center"} maxHeight={"100vh"} overflow={"hidden"}>
+          <Typography p={30} variant="h1">Setting page...</Typography>
         </Stack>
       </Stack>
       {openShortcuts && (

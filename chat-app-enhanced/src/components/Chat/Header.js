@@ -17,6 +17,9 @@ import { CaretDown, MagnifyingGlass, Phone, VideoCamera } from "phosphor-react";
 import { faker } from "@faker-js/faker";
 import { useSearchParams } from "react-router-dom";
 import useResponsive from "../../hooks/useResponsive";
+import Logo from "../../assets/su.ico"
+
+
 
 const StyledBadge = styled(Badge)(({ theme }) => ({
   "& .MuiBadge-badge": {
@@ -110,7 +113,7 @@ const ChatHeader = () => {
               }}
               variant="dot"
             >
-              <Avatar alt={faker.name.fullName()} src={faker.image.avatar()} />
+              <Avatar alt={faker.name.fullName()} src={Logo} />
             </StyledBadge>
           </Box>
           <Stack spacing={0.2}>

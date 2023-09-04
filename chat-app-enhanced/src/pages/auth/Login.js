@@ -8,7 +8,7 @@ const Login = () => {
   return (
     <>
       <Stack spacing={2} sx={{ mt:5,mb: 5, position: "relative" }}>
-        <Typography variant="h4">Login to SU-Talk</Typography>
+        <Typography variant="h4">Login to Sahmyook University ChatGPT</Typography>
         <Stack direction={"row"} spacing={0.5}>
           <Typography variant="body2">New User? </Typography>
           <Link to="/auth/register" component={RouterLink} variant="subtitle2">

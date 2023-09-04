@@ -11,6 +11,7 @@ import {
   Link,
   Stack,
 } from "@mui/material";
+import {Link as RouterLink} from "react-router-dom"
 import { RHFTextField } from "../../components/hook-form";
 import { Eye, EyeSlash } from "@phosphor-icons/react";
 
@@ -25,12 +26,12 @@ const LoginForm = () => {
   });
 
   const defaultValues = {
-    email: "demo@sutalk.com",
+    email: "cemi@syu.ac.kr",
     password: "demo1234",
   };
 
   const methods = useForm({
-    resolver: yupResolver(LoginForm),
+    resolver: yupResolver(LoginSchema),
     defaultValues,
   });
 
@@ -83,7 +84,7 @@ const LoginForm = () => {
         />
       </Stack>
       <Stack alignItems={"flex-end"} sx={{ my: 2 }}>
-        <Link  href="https://www.instagram.com/newjeans_official/" variant="body2" color="inherit" underline="always">
+        <Link component={RouterLink} to="/auth/reset-password" variant="body2" color="inherit" underline="always">
           Forgot Password?
         </Link>
       </Stack>

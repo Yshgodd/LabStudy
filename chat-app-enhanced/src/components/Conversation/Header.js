@@ -22,6 +22,8 @@ import { dispatch } from "../../redux/store";
 import { ToggleSidebar } from "../../redux/slices/app";
 import { useDispatch } from "react-redux";
 
+import Logo from "../../assets/Images/su.ico"
+
 const Header = () => {
   const theme = useTheme();
   const dispatch = useDispatch();
@@ -56,11 +58,11 @@ const Header = () => {
               anchorOrigin={{ vertical: "bottom", horizontal: "right" }}
               variant="dot"
             >
-              <Avatar alt={faker.name.fullName()} src={faker.image.avatar()} />
+              <Avatar alt={faker.name.fullName()} src={Logo} />
             </StyledBadge>
           </Box>
           <Stack spacing={0.2}>
-            <Typography variant="subtitle2">{faker.name.fullName()}</Typography>
+            <Typography variant="subtitle2">삼육대 인공지능 챗봇_수호</Typography>
             <Typography variant="caption">Online</Typography>
           </Stack>
         </Stack>

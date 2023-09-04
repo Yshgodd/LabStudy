@@ -31,9 +31,9 @@ import { faker } from "@faker-js/faker";
 import AntSwitch from "./AntSwitch";
 import { useState } from "react";
 
-const Transition = React.forwardRef(function Transition(props, ref) {
-  return <Slide direction="up" ref={ref} {...props} />;
-});
+// const Transition = React.forwardRef(function Transition(props, ref) {
+//   return <Slide direction="up" ref={ref} {...props} />;
+// });
 
 const BlockDialog = ({ open, handleClose }) => {
   return (
